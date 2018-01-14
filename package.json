@@ -1,0 +1,14 @@
+{
+    "name": "node-red-contrib-cryptocompare",
+    "node-red": {
+        "nodes": {
+            "coinlist": "coinlist.js",
+            "toppairs": "toppairs.js",
+            "histohour": "histohour.js",
+            "socialstats": "socialstats.js"
+        }
+    },
+    "dependencies": {
+        "request": "*"
+    }
+}

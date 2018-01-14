@@ -1,0 +1,35 @@
+<script type="text/javascript">
+RED.nodes.registerType('coinlist',{
+  category: 'blockchain',
+  color: '#65bf77',
+  defaults: {
+    name: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "cryptocompare_logo.png",
+  label: function() {
+    return this.name||"coinlist";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="coinlist">
+<div class="form-row">
+<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+<input type="text" id="node-input-name" placeholder="Name">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="coinlist">
+<p>Node-RED package to support the CryptoCompare CoinList API.</p>
+<h3>CoinList</h3>
+<p>Get general info for all the coins available on the website.</p>
+<p>URL: <a href="https://www.cryptocompare.com/api/#-api-data-coinlist-" target="blank">https://www.cryptocompare.com/api/#-api-data-coinlist-</a>.</p>
+<h3>URL Parameters</h3>
+<p>None</p>
+<h3>CryptoCompare</h3>
+<p>getting cryptocurrency pricing, OHLC and volume data from multiple exchanges. We have integrated so far with: Cryptsy, BTCChina, Bitstamp, BTER, OKCoin, Coinbase, Poloniex, Cexio, BTCE, BitTrex, Kraken, Bitfinex, Yacuna, LocalBitcoins, Yunbi, itBit, HitBTC, btcXchange, BTC38, Coinfloor, Huobi, CCCAGG, LakeBTC, ANXBTC, Bit2C, Coinsetter, CCEX, Coinse, MonetaGo, Gatecoin, Gemini, CCEDK, Cryptopia, Exmo, Yobit, Korbit, BitBay, BTCMarkets, Coincheck, QuadrigaCX, BitSquare, Vaultoro, MercadoBitcoin, Bitso, Unocoin, BTCXIndia, Paymium, TheRockTrading, bitFlyer, Quoine, Luno, EtherDelta, bitFlyerFX, TuxExchange, CryptoX, Liqui, MtGox, BitMarket, LiveCoin, Coinone, Tidex, Bleutrade, EthexIndia, Bithumb, CHBTC, ViaBTC, Jubi, Zaif, Novaexchange, WavesDEX, Binance, Lykke, Remitano, Coinroom, Abucoins, BXinth, Gateio, HuobiPro, OKEX and the list keeps growing every month. We are your one stop shop for all your cryptocurrency APIs and data needs.</p>
+</script>
+
+
