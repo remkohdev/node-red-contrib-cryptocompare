@@ -23,7 +23,33 @@ A collections of nodes to interact with the CryptoCompare API services in [Crymp
 - CoinList
 - TopPairs 
 
+### Requirements
+
+To run the nodes on your localhost you must have Node-RED installed on your localhost. 
+
 ### Usage
+
+```bash
+$ git clone https://github.com/remkohdev/node-red-contrib-cryptocompare.git
+$ cd node-red-contrib-cryptocompare
+$ npm install
+```
+
+To install the node modules on your localhost, install it into your Node-RED runtime.
+
+```bash
+$ sudo npm link
+$ cd ~/.node-red
+$ npm link node-red-contrib-cryptocompare
+```
+
+Run node-red.
+
+```bash
+$ node-red
+```
+
+Open a browser and go to the address http://127.0.0.1:1880.
 
 
 ### Contributing
