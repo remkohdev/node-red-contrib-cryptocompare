@@ -6,8 +6,8 @@ CryptoCompare API Nodes for Node-RED
 [![npm downloads](https://img.shields.io/npm/dt/node-red-contrib-cryptocompare.svg)](https://www.npmjs.com/package/node-red-contrib-cryptocompare)
 [![license](https://img.shields.io/npm/l/express.svg)](https://opensource.org/licenses/MIT)
 
-[![github open](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/issues.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
-[![github open good-first-issue](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/good-first-issue.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+[![github open](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
+[![github open good-first-issue](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/good%20first%20issue.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
