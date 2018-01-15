@@ -1,6 +1,7 @@
 CryptoCompare API Nodes for Node-RED
 ====================================
 
+[![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare)
 ![npm](https://img.shields.io/badge/node--red--contrib-npm-blue.svg)
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
