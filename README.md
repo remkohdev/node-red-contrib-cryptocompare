@@ -3,7 +3,8 @@ CryptoCompare API Nodes for Node-RED
 
 [![travis build](https://img.shields.io/travis/remkohdev/node-red-contrib-cryptocompare.svg)](https://travis-ci.org/remkohdev/node-red-contrib-cryptocompare)
 [![npm version](https://img.shields.io/npm/v/node-red-contrib-cryptocompare.svg)](https://www.npmjs.com/package/node-red-contrib-cryptocompare)
-
+[![npm downloads](https://img.shields.io/npm/dt/node-red-contrib-cryptocompare.svg)](https://www.npmjs.com/package/node-red-contrib-cryptocompare)
+[![license](https://img.shields.io/npm/l/express.svg)](https://opensource.org/licenses/MIT)
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
@@ -16,11 +17,25 @@ CryptoCompare API Nodes for Node-RED
 
 ## CHANGELOG
 
+### New in version 0.3.3
+
+- Added [shields](https://shields.io/) for Travis build, npm version
+- Added [Travis build](https://travis-ci.org/remkohdev/node-red-contrib-cryptocompare)
+
+### New in version 0.3.2
+
+- Patch README.md with missing documentation
+
+### New in version 0.3.1
+
+- Completed input validation of required and optional URL parameters
+- Updated package.json keywords
+- Added MIT LICENSE
+
 ### New in version 0.2.0
 
 - SocialStats API
 - HistoHour API
-- Completed input validation of required and optional URL parameters
 
 ### New in version 0.1.1
 
