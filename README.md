@@ -5,6 +5,14 @@ CryptoCompare API Nodes for Node-RED
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
+# Nodes
+
+- CoinList
+- TopPairs 
+- HistoHour
+- SocialStats
+
+## CHANGELOG
 
 ### New in version 0.2.0
 
@@ -25,10 +33,6 @@ CryptoCompare API Nodes for Node-RED
 
 A collections of nodes to interact with the CryptoCompare API services in [CryptoCompare API](https://www.cryptocompare.com/api/).
 
-# Nodes
-
-- CoinList
-- TopPairs 
 
 ### Requirements
 
