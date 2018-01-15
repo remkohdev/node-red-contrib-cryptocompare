@@ -2,6 +2,7 @@ CryptoCompare API Nodes for Node-RED
 ====================================
 
 [![travis build](https://img.shields.io/travis/remkohdev/node-red-contrib-cryptocompare.svg)](https://travis-ci.org/remkohdev/node-red-contrib-cryptocompare)
+[![npm version](https://img.shields.io/npm/v/node-red-contrib-cryptocompare.svg)](https://www.npmjs.com/package/node-red-contrib-cryptocompare)
 
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
