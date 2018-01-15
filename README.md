@@ -6,6 +6,9 @@ CryptoCompare API Nodes for Node-RED
 [![npm downloads](https://img.shields.io/npm/dt/node-red-contrib-cryptocompare.svg)](https://www.npmjs.com/package/node-red-contrib-cryptocompare)
 [![license](https://img.shields.io/npm/l/express.svg)](https://opensource.org/licenses/MIT)
 
+[![github open]](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/issues.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
+[![github open good-first-issue](https://img.shields.io/github/issues-raw/remkohdev/node-red-contrib-cryptocompare/good-first-issue.svg)](https://github.com/remkohdev/node-red-contrib-cryptocompare/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
 # Nodes
@@ -17,34 +20,7 @@ CryptoCompare API Nodes for Node-RED
 
 ## CHANGELOG
 
-### New in version 0.3.3
-
-- Added [shields](https://shields.io/) for Travis build, npm version
-- Added [Travis build](https://travis-ci.org/remkohdev/node-red-contrib-cryptocompare)
-
-### New in version 0.3.2
-
-- Patch README.md with missing documentation
-
-### New in version 0.3.1
-
-- Completed input validation of required and optional URL parameters
-- Updated package.json keywords
-- Added MIT LICENSE
-
-### New in version 0.2.0
-
-- SocialStats API
-- HistoHour API
-
-### New in version 0.1.1
-
-- Update package.json with required and recommended properties: version, repository, etc
-
-### New in version 0.1.0
-
-- CoinList API
-- TopPairs API
+See [CHANGELOG](CHANGELOG.md).
 
 ### CryptoCompare API Nodes for Node-RED
 
