@@ -16,7 +16,7 @@ module.exports = function(RED) {
 	        encoding: null,
       	};
 
-		request(opts, function (error, response, body) {
+		  request(opts, function (error, response, body) {
         node.status({});
 
         if (error) {

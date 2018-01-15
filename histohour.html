@@ -1,0 +1,87 @@
+<script type="text/javascript">
+RED.nodes.registerType('histohour',{
+  category: 'blockchain',
+  color: '#65bf77',
+  defaults: {
+    name: {value:""},
+    fsym: {value:""},
+    tsym: {value:""},
+    e: {value:""},
+    extraParams: {value:""},
+    sign: {value:""},
+    tryConversion: {value:""},
+    aggregate: {value:""},
+    limit: {value:""},
+    toTs: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "cryptocompare_logo.png",
+  label: function() {
+    return this.name||"histohour";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="histohour">
+  <div class="form-row">
+    <label for="node-input-fsym"><i class="icon-tag"></i> fsym</label>
+    <input type="text" id="node-input-fsym" placeholder="fsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tsym"><i class="icon-tag"></i> tsym</label>
+    <input type="text" id="node-input-tsym" placeholder="tsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-e"><i class="icon-tag"></i> e</label>
+    <input type="text" id="node-input-e" placeholder="e">
+  </div>
+  <div class="form-row">
+    <label for="node-input-extraParams"><i class="icon-tag"></i> extraParams</label>
+    <input type="text" id="node-input-extraParams" placeholder="extraParams">
+  </div>
+  <div class="form-row">
+    <label for="node-input-sign"><i class="icon-tag"></i> sign</label>
+    <input type="text" id="node-input-sign" placeholder="sign">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tryConversion"><i class="icon-tag"></i> tryConversion</label>
+    <input type="text" id="node-input-tryConversion" placeholder="tryConversion">
+  </div>
+  <div class="form-row">
+    <label for="node-input-aggregate"><i class="icon-tag"></i> aggregate</label>
+    <input type="text" id="node-input-aggregate" placeholder="aggregate">
+  </div>
+  <div class="form-row">
+    <label for="node-input-limit"><i class="icon-tag"></i> limit</label>
+    <input type="text" id="node-input-limit" placeholder="limit">
+  </div>
+  <div class="form-row">
+    <label for="node-input-toTs"><i class="icon-tag"></i> toTs</label>
+    <input type="text" id="node-input-toTs" placeholder="toTs">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="histohour">
+  <p>Node-RED package to support the CryptoCompare HistoHour API.</p>
+  <h3>HistoHour</h3>
+  <p>Get open, high, low, close, volumefrom and volumeto from the each hour historical data. It uses BTC conversion if data is not available because the coin is not trading in the specified currency.</p>
+  <p>URL: <a href="https://www.cryptocompare.com/api/#-api-data-histohour-" target="blank">https://www.cryptocompare.com/api/#-api-data-histohour-</a>.</p>
+<h3>URL Parameters</h3>
+<p>Configure URL parameters in the Node configuration, or pass URL parameters in the 'msg.params' property.</p>
+<p>fsym (type:string, required:true, info:From Symbol)</p>
+<p>tsym (type:string, required:true, info:To Symbol)</p>
+<p>e (type:string, required:true, default:CCCAGG, info:Name of exchange)</p>
+<p>extraParams (type:string, required:false, default:NotAvailable, info:Name of your application)</p>
+<p>sign (type:bool, required:false, default:true, info:If true, the server will sign the requests)</p>
+<p>tryConversion (type:bool, required:false, default:true, info:If false, no conversion of values is used)</p>
+<p>aggregate (type:int, required:false, default:1)</p>
+<p>limit (type:int, required:false, default:168. info:Max 2000)</p>
+<p>toTs (type:timestamp, required:false)</p>
+<h3>CryptoCompare</h3>
+<p>Getting cryptocurrency pricing, OHLC and volume data from multiple exchanges. We have integrated so far with: Cryptsy, BTCChina, Bitstamp, BTER, OKCoin, Coinbase, Poloniex, Cexio, BTCE, BitTrex, Kraken, Bitfinex, Yacuna, LocalBitcoins, Yunbi, itBit, HitBTC, btcXchange, BTC38, Coinfloor, Huobi, CCCAGG, LakeBTC, ANXBTC, Bit2C, Coinsetter, CCEX, Coinse, MonetaGo, Gatecoin, Gemini, CCEDK, Cryptopia, Exmo, Yobit, Korbit, BitBay, BTCMarkets, Coincheck, QuadrigaCX, BitSquare, Vaultoro, MercadoBitcoin, Bitso, Unocoin, BTCXIndia, Paymium, TheRockTrading, bitFlyer, Quoine, Luno, EtherDelta, bitFlyerFX, TuxExchange, CryptoX, Liqui, MtGox, BitMarket, LiveCoin, Coinone, Tidex, Bleutrade, EthexIndia, Bithumb, CHBTC, ViaBTC, Jubi, Zaif, Novaexchange, WavesDEX, Binance, Lykke, Remitano, Coinroom, Abucoins, BXinth, Gateio, HuobiPro, OKEX and the list keeps growing every month. We are your one stop shop for all your cryptocurrency APIs and data needs.</p>
+</script>

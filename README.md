@@ -5,9 +5,16 @@ CryptoCompare API Nodes for Node-RED
 
 <a target="blank" href="https://www.paypal.me/remkohdev"><img src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
-### ToDo
 
-- Complete TopPairs URL Parameters
+### New in version 0.2.0
+
+- SocialStats API
+- HistoHour API
+- Completed input validation of required and optional URL parameters
+
+### New in version 0.1.1
+
+- Update package.json with required and recommended properties: version, repository, etc
 
 ### New in version 0.1.0
 
@@ -16,7 +23,7 @@ CryptoCompare API Nodes for Node-RED
 
 ### CryptoCompare API Nodes for Node-RED
 
-A collections of nodes to interact with the CryptoCompare API services in [CrymptoCompare API](https://www.cryptocompare.com/api/).
+A collections of nodes to interact with the CryptoCompare API services in [CryptoCompare API](https://www.cryptocompare.com/api/).
 
 # Nodes
 
@@ -54,5 +61,13 @@ Open a browser and go to the address http://127.0.0.1:1880.
 
 ### Contributing
 
+To contribute fork the [node-red-contrib-cryptocompare repository](https://github.com/remkohdev/node-red-contrib-cryptocompare.git) and submit pull requests. Issues are tracked in the [Projects](https://github.com/remkohdev/node-red-contrib-cryptocompare/projects/1) tab.
+
+
+### Report Issues
+
+Issues are tracked in the [Projects](https://github.com/remkohdev/node-red-contrib-cryptocompare/projects/1) tab.
 
 ### Copyright and License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).

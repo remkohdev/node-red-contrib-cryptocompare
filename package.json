@@ -1,7 +1,22 @@
 {
     "name": "node-red-contrib-cryptocompare",
+    "version": "0.3.1",
+    "author": "Remko de Knikker <remkohdev@gmail.com>",
+    "keywords": [
+        "node-red",
+        "cryptocompare",
+        "cryptocurrency",
+        "bitcoin",
+        "ethereum",
+        "litecoin",
+        "price"
+    ],
     "description": "A collections of nodes to interact with the CryptoCompare API services.",
-    "version": "0.1.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/remkohdev/node-red-contrib-cryptocompare"
+    },
     "maintainers": [
         {
             "name": "Remko de Knikker",
@@ -9,14 +24,6 @@
             "web": "https://medium.com/@remkohdev"
         }
     ],
-    "keywords": [
-        "node-red"
-    ],
-    "author": "Remko de Knikker <remkohdev@gmail.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/remkohdev/node-red-contrib-cryptocompare"
-    },
     "node-red": {
         "nodes": {
             "coinlist": "coinlist.js",
