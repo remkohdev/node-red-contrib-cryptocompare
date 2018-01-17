@@ -14,9 +14,17 @@ CryptoCompare API Nodes for Node-RED
 # Nodes
 
 - CoinList
-- TopPairs 
+- CoinSnapshot
+- CoinSnapshotFullById
+- HistoDay
 - HistoHour
+- HistoMinute
+- MiningContracts
+- MiningEquipment
+- Price
+- PriceHistorical
 - SocialStats
+- TopPairs 
 
 ## CHANGELOG
 

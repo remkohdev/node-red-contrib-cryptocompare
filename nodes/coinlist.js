@@ -6,7 +6,7 @@ module.exports = function(RED) {
     RED.nodes.createNode(this,config);
     var node = this;
     
-    var apiUrl = "https://www.cryptocompare.com/api/data/coinlist/";
+    this.apiUrl = "https://www.cryptocompare.com/api/data/coinlist/";
 
     this.on('input', function(msg) {
     	

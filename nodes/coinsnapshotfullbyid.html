@@ -4,7 +4,7 @@ RED.nodes.registerType('coinsnapshotfullbyid',{
   color: '#65bf77',
   defaults: {
     name: {value:""},
-    id: {value:""}
+    coinId: {value:""}
   },
   inputs:1,
   outputs:1,
@@ -17,8 +17,8 @@ RED.nodes.registerType('coinsnapshotfullbyid',{
 
 <script type="text/x-red" data-template-name="coinsnapshotfullbyid">
   <div class="form-row">
-    <label for="node-input-id"><i class="icon-tag"></i> id</label>
-    <input type="text" id="node-input-id" placeholder="id">
+    <label for="node-input-coinId"><i class="icon-tag"></i> Coin Id</label>
+    <input type="text" id="node-input-coinId" placeholder="Coin Id">
   </div>
   <div class="form-row">
     <label for="node-input-name"><i class="icon-tag"></i> Name</label>

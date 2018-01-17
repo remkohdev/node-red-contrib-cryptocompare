@@ -4,7 +4,11 @@ module.exports = function(RED) {
   "use strict";
   function SocialStatsNode(config) {
     RED.nodes.createNode(this,config);
-    this.id = config.id;
+
+    this.apiUrl = "https://www.cryptocompare.com/api/data/socialstats";
+    
+    this.id = config.coinId;
+
     var node = this;
     this.on('input', function(msg) {
 
@@ -35,7 +39,7 @@ module.exports = function(RED) {
 
     	var opts = {
 	        method: "GET",
-	        url: "https://www.cryptocompare.com/api/data/socialstats?"+urlParams,
+	        url: this.apiUrl+"?"+urlParams,
 	        timeout: node.reqTimeout,
 	        headers: {},
 	        encoding: null,

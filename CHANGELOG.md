@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 0.4.0 - 2018-01-17
+
+- Added CoinSnapshot, CoinSnapshotFullById, HistoDay, HistoMinute, MiningContracts, MiningEquipment, Price, PriceHistorical nodes
+
 ## 0.3.4 - 2018-01-15 
 
 - Added [shields](https://shields.io/) for Github

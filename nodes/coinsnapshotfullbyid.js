@@ -7,7 +7,7 @@ module.exports = function(RED) {
 
     this.apiUrl = "https://www.cryptocompare.com/api/data/coinsnapshotfullbyid";
 
-    this.id = config.id;
+    this.id = config.coinId;
 
     var node = this;
     this.on('input', function(msg) {
