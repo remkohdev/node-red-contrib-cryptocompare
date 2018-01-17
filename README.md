@@ -41,6 +41,10 @@ To run the nodes on your localhost you must have Node-RED installed on your loca
 
 ### Usage
 
+I have submitted an example flow ['Simple Examples for CryptoCompare API Nodes'](https://flows.nodered.org/flow/ee4307da8c4c6994e9203147bd6277ac) to the the Node-RED Library with simple usage examples that can be imported via the Menu > Import item. 
+
+### Installation
+
 ```bash
 $ git clone https://github.com/remkohdev/node-red-contrib-cryptocompare.git
 $ cd node-red-contrib-cryptocompare
