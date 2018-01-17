@@ -2,10 +2,10 @@ var request = require('request');
 
 module.exports = function(RED) {
   "use strict";
-  function HistoHourNode(config) {
+  function HistoDayNode(config) {
     RED.nodes.createNode(this,config);
 
-    this.apiUrl = "https://min-api.cryptocompare.com/data/histohour";
+    this.apiUrl = "https://min-api.cryptocompare.com/data/histoday";
 
     this.fsym = config.fsym;
     this.tsym = config.tsym;
@@ -16,6 +16,7 @@ module.exports = function(RED) {
     this.aggregate = config.aggregate;
     this.limit = config.limit;
     this.toTs = config.toTs;
+    this.allData = config.allData;
 
     var node = this;
     this.on('input', function(msg) {
@@ -162,5 +163,5 @@ module.exports = function(RED) {
 
     });
   }
-  RED.nodes.registerType("histohour", HistoHourNode);
+  RED.nodes.registerType("histoday", HistoDayNode);
 }

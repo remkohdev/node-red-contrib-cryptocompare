@@ -2,20 +2,17 @@ var request = require('request');
 
 module.exports = function(RED) {
   "use strict";
-  function HistoHourNode(config) {
+  function PriceNode(config) {
     RED.nodes.createNode(this,config);
 
-    this.apiUrl = "https://min-api.cryptocompare.com/data/histohour";
+    this.apiUrl = "https://min-api.cryptocompare.com/data/price";
 
     this.fsym = config.fsym;
-    this.tsym = config.tsym;
+    this.tsyms = config.tsyms;
     this.e = config.e;
     this.extraParams = config.extraParams;
     this.sign = config.sign;
     this.tryConversion = config.tryConversion;
-    this.aggregate = config.aggregate;
-    this.limit = config.limit;
-    this.toTs = config.toTs;
 
     var node = this;
     this.on('input', function(msg) {
@@ -41,31 +38,14 @@ module.exports = function(RED) {
 		      return false;
     		}
       }
-      // tsym
-      if(msg.params && msg.params.tsym){
-        urlParams.push("tsym="+msg.params.tsym);
+      // tsyms
+      if(msg.params && msg.params.tsyms){
+        urlParams.push("tsyms="+msg.params.tsyms);
       }else{
-        if(node.tsym && node.tsym!=""){
-          urlParams.push("tsym="+ node.tsym);
+        if(node.tsyms && node.tsyms!=""){
+          urlParams.push("tsyms="+ node.tsyms);
         }else{
-          var errMsg = "Error: required tsym parameter is missing";
-          node.status({
-            fill: 'red',
-            shape: 'ring',
-            text: errMsg
-          });
-          node.error(errMsg, msg);
-          return false;
-        }
-      }
-      // e
-      if(msg.params && msg.params.e){
-        urlParams.push("e="+msg.params.e);
-      }else{
-        if(node.e && node.e!=""){
-          urlParams.push("e="+ node.e);
-        }else{
-          var errMsg = "Error: required e parameter is missing";
+          var errMsg = "Error: required tsyms parameter is missing";
           node.status({
             fill: 'red',
             shape: 'ring',
@@ -76,6 +56,14 @@ module.exports = function(RED) {
         }
       }
       // optional fields
+      // e
+      if(msg.params && msg.params.e){
+        urlParams.push("e="+msg.params.e);
+      }else{
+        if(node.e || node.e!=""){
+          urlParams.push("e="+ node.e);
+        }
+      }
       // extraParams
       if(msg.params && msg.params.extraParams){
         urlParams.push("extraParams="+msg.params.extraParams);
@@ -98,30 +86,6 @@ module.exports = function(RED) {
       }else{
         if(node.tryConversion || node.tryConversion!=""){
           urlParams.push("tryConversion="+ node.tryConversion);
-        }
-      }
-      // aggregate
-      if(msg.params && msg.params.aggregate){
-        urlParams.push("aggregate="+msg.params.aggregate);
-      }else{
-        if(node.aggregate || node.aggregate!=""){
-          urlParams.push("aggregate="+ node.aggregate);
-        }
-      }
-      // limit
-      if(msg.params && msg.params.limit){
-        urlParams.push("limit="+msg.params.limit);
-      }else{
-        if(node.limit || node.limit!=""){
-          urlParams.push("limit="+ node.limit);
-        }
-      }
-      // toTs
-      if(msg.params && msg.params.toTs){
-        urlParams.push("toTs="+msg.params.toTs);
-      }else{
-        if(node.toTs || node.toTs!=""){
-          urlParams.push("toTs="+ node.toTs);
         }
       }
 
@@ -162,5 +126,5 @@ module.exports = function(RED) {
 
     });
   }
-  RED.nodes.registerType("histohour", HistoHourNode);
+  RED.nodes.registerType("price", PriceNode);
 }

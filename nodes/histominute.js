@@ -2,10 +2,10 @@ var request = require('request');
 
 module.exports = function(RED) {
   "use strict";
-  function HistoHourNode(config) {
+  function HistoMinuteNode(config) {
     RED.nodes.createNode(this,config);
 
-    this.apiUrl = "https://min-api.cryptocompare.com/data/histohour";
+    this.apiUrl = "https://min-api.cryptocompare.com/data/histominute";
 
     this.fsym = config.fsym;
     this.tsym = config.tsym;
@@ -162,5 +162,5 @@ module.exports = function(RED) {
 
     });
   }
-  RED.nodes.registerType("histohour", HistoHourNode);
+  RED.nodes.registerType("histominute", HistoMinuteNode);
 }

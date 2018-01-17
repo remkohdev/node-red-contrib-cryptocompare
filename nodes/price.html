@@ -1,0 +1,68 @@
+<script type="text/javascript">
+RED.nodes.registerType('price',{
+  category: 'blockchain',
+  color: '#65bf77',
+  defaults: {
+    name: {value:""},
+    fsym: {value:""},
+    tsyms: {value:""},
+    e: {value:""},
+    extraParams: {value:""},
+    sign: {value:""},
+    tryConversion: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "cryptocompare_logo.png",
+  label: function() {
+    return this.name||"price";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="price">
+  <div class="form-row">
+    <label for="node-input-fsym"><i class="icon-tag"></i> fsym</label>
+    <input type="text" id="node-input-fsym" placeholder="fsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tsyms"><i class="icon-tag"></i> tsyms</label>
+    <input type="text" id="node-input-tsyms" placeholder="tsyms">
+  </div>
+  <div class="form-row">
+    <label for="node-input-e"><i class="icon-tag"></i> e</label>
+    <input type="text" id="node-input-e" placeholder="e">
+  </div>
+  <div class="form-row">
+    <label for="node-input-extraParams"><i class="icon-tag"></i> extraParams</label>
+    <input type="text" id="node-input-extraParams" placeholder="extraParams">
+  </div>
+  <div class="form-row">
+    <label for="node-input-sign"><i class="icon-tag"></i> sign</label>
+    <input type="text" id="node-input-sign" placeholder="sign">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tryConversion"><i class="icon-tag"></i> tryConversion</label>
+    <input type="text" id="node-input-tryConversion" placeholder="tryConversion">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="price">
+  <p>Node-RED package to support the CryptoCompare Price API.</p>
+  <h3>Price</h3>
+  <p>Get the latest price for a list of one or more currencies. Really fast, 20-60 ms. Cached each 10 seconds.</p>
+  <p>URL: <a href="https://www.cryptocompare.com/api#-api-data-price-" target="blank">https://www.cryptocompare.com/api#-api-data-price-</a>.</p>
+<h3>URL Parameters</h3>
+<p>Configure URL parameters in the Node configuration, or pass URL parameters in the 'msg.params' property.</p>
+<p>fsym (type:string, required:true, info:From Symbol)</p>
+<p>e (type:string, required:false, default:CCCAGG, info:Name of exchange.)</p>
+<p>extraParams (type:string, required:false, default:NotAvailable, info:Name of your application)</p>
+<p>sign (type:bool, required:false, default:true, info:If true, the server will sign the requests)</p>
+<p>tryConversion (type:bool, required:false, default:true, info:If false, no conversion of values is used)</p>
+<h3>CryptoCompare</h3>
+<p>Getting cryptocurrency pricing, OHLC and volume data from multiple exchanges. We have integrated so far with: Cryptsy, BTCChina, Bitstamp, BTER, OKCoin, Coinbase, Poloniex, Cexio, BTCE, BitTrex, Kraken, Bitfinex, Yacuna, LocalBitcoins, Yunbi, itBit, HitBTC, btcXchange, BTC38, Coinfloor, Huobi, CCCAGG, LakeBTC, ANXBTC, Bit2C, Coinsetter, CCEX, Coinse, MonetaGo, Gatecoin, Gemini, CCEDK, Cryptopia, Exmo, Yobit, Korbit, BitBay, BTCMarkets, Coincheck, QuadrigaCX, BitSquare, Vaultoro, MercadoBitcoin, Bitso, Unocoin, BTCXIndia, Paymium, TheRockTrading, bitFlyer, Quoine, Luno, EtherDelta, bitFlyerFX, TuxExchange, CryptoX, Liqui, MtGox, BitMarket, LiveCoin, Coinone, Tidex, Bleutrade, EthexIndia, Bithumb, CHBTC, ViaBTC, Jubi, Zaif, Novaexchange, WavesDEX, Binance, Lykke, Remitano, Coinroom, Abucoins, BXinth, Gateio, HuobiPro, OKEX and the list keeps growing every month. We are your one stop shop for all your cryptocurrency APIs and data needs.</p>
+</script>

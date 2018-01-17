@@ -27,9 +27,17 @@
     "node-red": {
         "nodes": {
             "coinlist": "nodes/coinlist.js",
-            "toppairs": "nodes/toppairs.js",
+            "coinsnapshot": "nodes/coinsnapshot.js",
+            "coinsnapshotfullbyid": "nodes/coinsnapshotfullbyid.js",
+            "histoday": "nodes/histoday.js",
             "histohour": "nodes/histohour.js",
-            "socialstats": "nodes/socialstats.js"
+            "histominute": "nodes/histominute.js",
+            "miningcontracts": "nodes/miningcontracts.js",
+            "miningequipment": "nodes/miningequipment.js",
+            "price": "nodes/price.js",
+            "pricehistorical": "nodes/pricehistorical.js",
+            "socialstats": "nodes/socialstats.js",
+            "toppairs": "nodes/toppairs.js"
         }
     },
     "dependencies": {

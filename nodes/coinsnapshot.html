@@ -1,0 +1,45 @@
+<script type="text/javascript">
+RED.nodes.registerType('coinsnapshot',{
+  category: 'blockchain',
+  color: '#65bf77',
+  defaults: {
+    name: {value:""},
+    fsym: {value:""},
+    tsym: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "cryptocompare_logo.png",
+  label: function() {
+    return this.name||"coinsnapshot";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="coinsnapshot">
+  <div class="form-row">
+    <label for="node-input-fsym"><i class="icon-tag"></i> fsym</label>
+    <input type="text" id="node-input-fsym" placeholder="fsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tsym"><i class="icon-tag"></i> tsym</label>
+    <input type="text" id="node-input-tsym" placeholder="tsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="coinsnapshot">
+  <p>Node-RED package to support the CryptoCompare CoinSnapshot API.</p>
+  <h3>CoinSnapshot</h3>
+  <p>Get data for a currency pair. It returns general block explorer information, aggregated data and individual data for each exchange available.</p>
+  <p>URL: <a href="https://www.cryptocompare.com/api#-api-data-coinsnapshot-" target="blank">https://www.cryptocompare.com/api#-api-data-coinsnapshot-</a>.</p>
+<h3>URL Parameters</h3>
+<p>Configure URL parameters in the Node configuration, or pass URL parameters in the 'msg.params' property.</p>
+<p>fsym (type:string, required:true, info:From Symbol)</p>
+<p>tsym (type:string, required:true, info:To Symbol)</p>
+<h3>CryptoCompare</h3>
+<p>Getting cryptocurrency pricing, OHLC and volume data from multiple exchanges. We have integrated so far with: Cryptsy, BTCChina, Bitstamp, BTER, OKCoin, Coinbase, Poloniex, Cexio, BTCE, BitTrex, Kraken, Bitfinex, Yacuna, LocalBitcoins, Yunbi, itBit, HitBTC, btcXchange, BTC38, Coinfloor, Huobi, CCCAGG, LakeBTC, ANXBTC, Bit2C, Coinsetter, CCEX, Coinse, MonetaGo, Gatecoin, Gemini, CCEDK, Cryptopia, Exmo, Yobit, Korbit, BitBay, BTCMarkets, Coincheck, QuadrigaCX, BitSquare, Vaultoro, MercadoBitcoin, Bitso, Unocoin, BTCXIndia, Paymium, TheRockTrading, bitFlyer, Quoine, Luno, EtherDelta, bitFlyerFX, TuxExchange, CryptoX, Liqui, MtGox, BitMarket, LiveCoin, Coinone, Tidex, Bleutrade, EthexIndia, Bithumb, CHBTC, ViaBTC, Jubi, Zaif, Novaexchange, WavesDEX, Binance, Lykke, Remitano, Coinroom, Abucoins, BXinth, Gateio, HuobiPro, OKEX and the list keeps growing every month. We are your one stop shop for all your cryptocurrency APIs and data needs.</p>
+</script>

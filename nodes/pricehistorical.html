@@ -1,0 +1,75 @@
+<script type="text/javascript">
+RED.nodes.registerType('pricehistorical',{
+  category: 'blockchain',
+  color: '#65bf77',
+  defaults: {
+    name: {value:""},
+    fsym: {value:""},
+    tsyms: {value:""},
+    ts: {value:""},
+    markets: {value:""},
+    extraParams: {value:""},
+    sign: {value:""},
+    tryConversion: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "cryptocompare_logo.png",
+  label: function() {
+    return this.name||"pricehistorical";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="pricehistorical">
+  <div class="form-row">
+    <label for="node-input-fsym"><i class="icon-tag"></i> fsym</label>
+    <input type="text" id="node-input-fsym" placeholder="fsym">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tsyms"><i class="icon-tag"></i> tsyms</label>
+    <input type="text" id="node-input-tsyms" placeholder="tsyms">
+  </div>
+  <div class="form-row">
+    <label for="node-input-ts"><i class="icon-tag"></i> ts</label>
+    <input type="text" id="node-input-ts" placeholder="ts">
+  </div>
+  <div class="form-row">
+    <label for="node-input-markets"><i class="icon-tag"></i> markets</label>
+    <input type="text" id="node-input-markets" placeholder="markets">
+  </div>
+  <div class="form-row">
+    <label for="node-input-extraParams"><i class="icon-tag"></i> extraParams</label>
+    <input type="text" id="node-input-extraParams" placeholder="extraParams">
+  </div>
+  <div class="form-row">
+    <label for="node-input-sign"><i class="icon-tag"></i> sign</label>
+    <input type="text" id="node-input-sign" placeholder="sign">
+  </div>
+  <div class="form-row">
+    <label for="node-input-tryConversion"><i class="icon-tag"></i> tryConversion</label>
+    <input type="text" id="node-input-tryConversion" placeholder="tryConversion">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="pricehistorical">
+  <p>Node-RED package to support the CryptoCompare PriceHistorical API.</p>
+  <h3>PriceHistorical</h3>
+  <p>Get the price of any cryptocurrency in any other currency that you need at a given timestamp. The price comes from the daily info - so it would be the price at the end of the day GMT based on the requested TS. If the crypto does not trade directly into the toSymbol requested, BTC will be used for conversion. Tries to get direct trading pair data, if there is none or it is more than 30 days before the ts requested, it uses BTC conversion. If the opposite pair trades we invert it (eg.: BTC-XMR).</p>
+  <p>URL: <a href="https://www.cryptocompare.com/api#-api-data-pricehistorical-" target="blank">https://www.cryptocompare.com/api#-api-data-pricehistorical-</a>.</p>
+<h3>URL Parameters</h3>
+<p>Configure URL parameters in the Node configuration, or pass URL parameters in the 'msg.params' property.</p>
+<p>fsym (type:string, required:true, info:From Symbol)</p>
+<p>tsyms (type:string, required:true, info:To Symbol)</p>
+<p>ts (type:timestamp, required:false)</p>
+<p>markets (type:string, required:true, default:CCCAGG, info:Name of exchanges, include multiple)</p>
+<p>extraParams (type:string, required:false, default:NotAvailable, info:Name of your application)</p>
+<p>sign (type:bool, required:false, default:true, info:If true, the server will sign the requests)</p>
+<p>tryConversion (type:bool, required:false, default:true, info:If false, no conversion of values is used)</p>
+<h3>CryptoCompare</h3>
+<p>Getting cryptocurrency pricing, OHLC and volume data from multiple exchanges. We have integrated so far with: Cryptsy, BTCChina, Bitstamp, BTER, OKCoin, Coinbase, Poloniex, Cexio, BTCE, BitTrex, Kraken, Bitfinex, Yacuna, LocalBitcoins, Yunbi, itBit, HitBTC, btcXchange, BTC38, Coinfloor, Huobi, CCCAGG, LakeBTC, ANXBTC, Bit2C, Coinsetter, CCEX, Coinse, MonetaGo, Gatecoin, Gemini, CCEDK, Cryptopia, Exmo, Yobit, Korbit, BitBay, BTCMarkets, Coincheck, QuadrigaCX, BitSquare, Vaultoro, MercadoBitcoin, Bitso, Unocoin, BTCXIndia, Paymium, TheRockTrading, bitFlyer, Quoine, Luno, EtherDelta, bitFlyerFX, TuxExchange, CryptoX, Liqui, MtGox, BitMarket, LiveCoin, Coinone, Tidex, Bleutrade, EthexIndia, Bithumb, CHBTC, ViaBTC, Jubi, Zaif, Novaexchange, WavesDEX, Binance, Lykke, Remitano, Coinroom, Abucoins, BXinth, Gateio, HuobiPro, OKEX and the list keeps growing every month. We are your one stop shop for all your cryptocurrency APIs and data needs.</p>
+</script>

@@ -5,11 +5,14 @@ module.exports = function(RED) {
   function CoinListNode(config) {
     RED.nodes.createNode(this,config);
     var node = this;
+    
+    var apiUrl = "https://www.cryptocompare.com/api/data/coinlist/";
+
     this.on('input', function(msg) {
     	
     	var opts = {
 	        method: "GET",
-	        url: "https://www.cryptocompare.com/api/data/coinlist/",
+	        url: this.apiUrl,
 	        timeout: node.reqTimeout,
 	        //followRedirect: nodeFollowRedirects,
 	        headers: {},
@@ -19,8 +22,7 @@ module.exports = function(RED) {
 		  request(opts, function (error, response, body) {
         node.status({});
 
-        if (error) {
-         
+        if (error) {       
             node.error(error, msg);
             msg.payload = error.toString() + " : " + url;
             msg.statusCode = error.code;
