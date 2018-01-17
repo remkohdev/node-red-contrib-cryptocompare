@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-cryptocompare",
-    "version": "0.3.4",
+    "version": "0.4.0",
     "author": "Remko de Knikker <remkohdev@gmail.com>",
     "keywords": [
         "node-red",
@@ -26,10 +26,10 @@
     ],
     "node-red": {
         "nodes": {
-            "coinlist": "coinlist.js",
-            "toppairs": "toppairs.js",
-            "histohour": "histohour.js",
-            "socialstats": "socialstats.js"
+            "coinlist": "nodes/coinlist.js",
+            "toppairs": "nodes/toppairs.js",
+            "histohour": "nodes/histohour.js",
+            "socialstats": "nodes/socialstats.js"
         }
     },
     "dependencies": {
